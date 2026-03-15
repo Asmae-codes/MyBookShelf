@@ -1,0 +1,229 @@
+:root {
+    --main-gradient: linear-gradient(45deg, #ff8c00, #8b0000);
+    --text-color: #fff;
+    --card-bg: #1a1a1a;
+    --input-bg: #222;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: var(--main-gradient);
+    color: var(--text-color);
+}
+
+header .logo {
+    width: 50px;
+    height: 50px;
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align:left;
+}
+
+header .header-buttons button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #0f1003;
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+/* ===== HERO ===== */
+.hero {
+    height: 250px;
+    background-image: url('assets/images/hero-cover.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.hero-buttons button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: var(--main-gradient);
+    color: var(--text-color);
+    transition: 0.2s;
+}
+
+.hero-buttons button:hover {
+    transform: scale(1.05);
+}
+
+/* ===== MODAL ===== */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal.hidden {
+    display:none;
+}
+
+.modal-content {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    color: var(--text-color);
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: var(--input-bg);
+    color: var(--text-color);
+}
+
+.modal-content button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: var(--main-gradient);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.modal-content button:hover {
+    transform: scale(1.05);
+}
+
+/* ====== BOOKS SECTION ===== */
+.books-section {
+    padding: 20px;
+    background-color: #111;
+    color: var(--text-color);
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 15px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.book-card h3 {
+    font-size: 1.2em;
+}
+
+.book-card p {
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+.book-card a {
+    color: #ffa500;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.book-card a:hover {
+    text-decoration: underline;
+}
+
+.book-card .stars {
+    color: #ffcc00;
+    font-size: 1em;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background: var(--main-gradient); 
+    color: var(--text-color);
+    text-align: center;
+    padding: 15px 20px;
+  
+    
+}
+
+.site-footer p {
+    margin: 1px 0;
+    font-size: 0.9em;
+}

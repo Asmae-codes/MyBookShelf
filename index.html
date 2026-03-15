@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBookshelf</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <img src="assets/images/logo.jpeg" alt="MyBookshelf Logo" class="logo">
+        <h1>MyBookshelf</h1>
+        <div class="header-buttons">
+            <button id="signInBtn">👤 Sign In</button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to MyBookshelf</h2>
+            <p>Your personal library to add, explore, and enjoy books</p>
+            <div class="hero-buttons">
+                <button id="addBookBtn">➕ Add Book</button>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ADD BOOK MODAL -->
+    <section id="addBookModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">✖</span>
+            <h2>Add a New Book</h2>
+            <form id="bookForm">
+                <input type="text" id="title" placeholder="Book Title" required>
+                <input type="text" id="author" placeholder="Author Name" required>
+                <textarea id="summary" placeholder="Short Summary (2–3 lines)" required></textarea>
+                <label>Publication Date</label>
+                <input type="date" id="publicationDate" required>
+                <label>Written Date</label>
+                <input type="date" id="writtenDate" required>
+                <input type="url" id="docLink" placeholder="Document Link (PDF or URL)">
+                <select id="category">
+                    <option value="Religion">Religion</option>
+                    <option value="Self-Help">Self-Help</option>
+                    <option value="Science">Science</option>
+                    <option value="Literature">Literature</option>
+                </select>
+                <label for="cover"> Book Cover (optional)</label>
+                <input type="file" id="cover" accept="image/*">
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- LIBRARY SECTION -->
+    <section class="books-section ">
+        <h2>Library</h2>
+        <input type="text" id="searchInput" placeholder="Search by title or author..." class="search-bar">
+        <div class="books-container" id="booksContainer">
+            <!-- Book cards apper here -->
+        </div>
+    </section>
+    <!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+    <p>Welcome to MyBookshelf - Your personal library.</p>
+    <p>Developed with ❤️ by Deepmind </p>
+</footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
