@@ -12,10 +12,11 @@ let defaultBooks = [
   {
     title: "الداء والدواء",
     author: "ابن القيم الجوزية",
-    summary : "This book addresses the diseases of the human heart and their causes, then explains the legitimate remedies based on the Quran and the Sunnah.",
+    summary:
+      "This book addresses the diseases of the human heart and their causes, then explains the legitimate remedies based on the Quran and the Sunnah.",
     publicationDate: "2008-01-01",
     writtenDate: "1350-01-01",
-    docLink:"https://kolalkotob.com/public/index.php/book8749.html?utm_source=chatgpt.com",
+    docLink: "https://kolalkotob.com/public/book8749.html",
     cover: "assets/images/book2.jpeg",
     category: "Religion",
     rating: 5,
@@ -26,7 +27,7 @@ let defaultBooks = [
     summary: "An easy & proven way to build good habits & break bad ones.",
     publicationDate: "2018-10-16",
     writtenDate: "2018-01-01",
-    docLink: "https://en.pdfdrive.to/dl/atomic-habits-8?utm_source=chatgpt.com",
+    docLink:"https://drive.google.com/file/d/1eAZMdXO-Zn4_90TV365KMpIqfxUy7J0t/view",
     cover: "assets/images/book1.jpeg",
     category: "Self-Help",
     rating: 5,
@@ -35,10 +36,8 @@ let defaultBooks = [
 
 // ===== LOADING BOOKS =====
 
-
-  books = defaultBooks;
-  localStorage.setItem("books", JSON.stringify(books));
-
+books = defaultBooks;
+localStorage.setItem("books", JSON.stringify(books));
 
 // ===== FUNCTION TO RENDER BOOKS =====
 function renderBooks(filter = "") {
@@ -110,8 +109,7 @@ function deleteBook(index) {
 
 // ===== VIEW LIBRARY BUTTON =====
 
-  renderBooks();
-
+renderBooks();
 
 // ===== SEARCH FUNCTION =====
 searchInput.addEventListener("input", () => {
