@@ -54,7 +54,3 @@ MyBookshelf is a personal library web application that allows users to:
 - **HTML5** – semantic and accessible markup
 - **CSS3** – modern styling with Flexbox, Grid, transitions, and gradient colors
 - **JavaScript (Vanilla)** – dynamic rendering, DOM manipulation, event handling, and local storage
-
-
-
-
